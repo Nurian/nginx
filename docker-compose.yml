@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+   web:
+     image: nginxtest
+     container_name: ${P_DOMAIN}-nginx
+     hostname: ${P_DOMAIN}
+     restart: always
+     ports:
+       - "80"
+       - "${P_PORT}:22"
+     environment:
+       PRIMEHOST_USER: ${P_USER}
+       PRIMEHOST_PASSWORD: ${P_PASSWORD}
+       PRIMEHOST_DOMAIN: ${P_DOMAIN}
+       VIRTUAL_HOST: ${P_DOMAIN}${P_EXTRA_DOMAINS}
+       LETSENCRYPT_HOST: ${P_DOMAIN}${P_EXTRA_DOMAINS}
+       LETSENCRYPT_EMAIL: ${P_MAIL}
+networks:
+    default:
+       external:
+         name: webproxy
+
