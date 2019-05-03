@@ -2,7 +2,7 @@ version: '3'
 
 services:
    web:
-     image: nginx:php7.1
+     image: primehost/nginx:php7.1
      container_name: ${P_DOMAIN}-nginx
      hostname: ${P_DOMAIN}
      restart: always
