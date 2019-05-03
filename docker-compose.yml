@@ -20,4 +20,3 @@ networks:
     default:
        external:
          name: webproxy
-
