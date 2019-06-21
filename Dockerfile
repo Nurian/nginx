@@ -10,7 +10,7 @@ RUN apt-get update \
  && LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/php \
  && apt-get update \
  && apt-get -y install mysql-client nginx php7.1-fpm php7.1-mysql \
- && apt-get -y install php7.1-xml php7.1-mbstring php7.1-bcmath php7.1-zip php7.1-pdo-mysql php7.1-curl php7.1-gd php7.1-intl \
+ && apt-get -y install php7.1-xml php7.1-mbstring php7.1-bcmath php7.1-zip php7.1-pdo-mysql php7.1-curl php7.1-gd php7.1-intl php7.1-soap \
  && apt-get -y install php7.1-imagick php7.1-imap php7.1-mcrypt php7.1-memcache php7.1-apcu php7.1-pspell php7.1-recode php7.1-tidy php7.1-xmlrpc
 
 # php-fpm config
