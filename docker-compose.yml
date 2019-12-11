@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+   web:
+     image: my-nginx 
+     volumes:
+             - /var/docker-data/container/lion.nordloh-webdesign.de/nginx/www:/usr/share/nginx/www
+     environment:
+       VIRTUAL_HOST: lion.nordloh-webdesign.de
+       LETSENCRYPT_HOST: lion.nordloh-webdesign.de
+       LETSENCRYPT_EMAIL: lkoeller@nordloh-webdesign.de
+       PRIMEHOST_USER: Lion
+       PRIMEHOST_PASSWORD: oLB2V724nreUKirA
+
+   php:
+     image: php:7.3-fpm
+     volumes:
+             - /var/docker-data/container/lion.nordloh-webdesign.de/nginx/www:/usr/share/nginx/www
+
+networks:
+    default:
+       external:
+         name: webproxy
