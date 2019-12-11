@@ -4,7 +4,7 @@ services:
    web:
      image: my-nginx 
      volumes:
-             - /var/docker-data/container/lion.nordloh-webdesign.de/nginx/www:/usr/share/nginx/www
+             - /var/docker-data/container/develop/nginx/www:/usr/share/nginx/www
      environment:
        VIRTUAL_HOST: lion.nordloh-webdesign.de
        LETSENCRYPT_HOST: lion.nordloh-webdesign.de
@@ -15,7 +15,7 @@ services:
    php:
      image: php:7.3-fpm
      volumes:
-             - /var/docker-data/container/lion.nordloh-webdesign.de/nginx/www:/usr/share/nginx/www
+             - /var/docker-data/container/develop/nginx/www:/usr/share/nginx/www
 
 networks:
     default:
