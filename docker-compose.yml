@@ -2,7 +2,7 @@ version: '3'
 
 services:
    web:
-     image: my-nginx 
+     image: primehost/nginx:develop 
      volumes:
              - /var/docker-data/container/develop/nginx/www:/usr/share/nginx/www
      environment:
