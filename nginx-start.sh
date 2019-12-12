@@ -11,7 +11,7 @@ echo "root:$PRIMEHOST_PASSWORD" | chpasswd
 
 # Custom user for nginx and php
 sed -i s/www-data/$PRIMEHOST_USER/g /etc/nginx/nginx.conf
-chown -R ${PRIMEHOST_USER}:${PRIMEHOST_USER} /usr/share/nginx/www
+chown -R ${PRIMEHOST_USER}:${PRIMEHOST_USER} /var/www/html
 
 # start all the services
 /usr/bin/supervisord

@@ -4,18 +4,18 @@ services:
    web:
      image: primehost/nginx:develop 
      volumes:
-             - /var/docker-data/container/develop/nginx/www:/usr/share/nginx/www
+             - /var/docker-data/container/develop/nginx/www:/var/www/html
      environment:
-       VIRTUAL_HOST: Domain@yourdomain.de
-       LETSENCRYPT_HOST: Domain@yourdomain.de
-       LETSENCRYPT_EMAIL: Email@youremail.de
-       PRIMEHOST_USER: User
-       PRIMEHOST_PASSWORD: Password
+       VIRTUAL_HOST: yourdomain.de
+       LETSENCRYPT_HOST: yourdomain.de
+       LETSENCRYPT_EMAIL: your@mail.de
+       PRIMEHOST_USER: user
+       PRIMEHOST_PASSWORD: yourpassword
 
    php:
      image: php:7.3-fpm
      volumes:
-             - /var/docker-data/container/develop/nginx/www:/usr/share/nginx/www
+             - /var/docker-data/container/develop/nginx/www:/var/www/html
 
 networks:
     default:
