@@ -6,11 +6,11 @@ services:
      volumes:
              - /var/docker-data/container/develop/nginx/www:/usr/share/nginx/www
      environment:
-       VIRTUAL_HOST: lion.nordloh-webdesign.de
-       LETSENCRYPT_HOST: lion.nordloh-webdesign.de
-       LETSENCRYPT_EMAIL: lkoeller@nordloh-webdesign.de
-       PRIMEHOST_USER: Lion
-       PRIMEHOST_PASSWORD: oLB2V724nreUKirA
+       VIRTUAL_HOST: Domain@yourdomain.de
+       LETSENCRYPT_HOST: Domain@yourdomain.de
+       LETSENCRYPT_EMAIL: Email@youremail.de
+       PRIMEHOST_USER: User
+       PRIMEHOST_PASSWORD: Password
 
    php:
      image: php:7.3-fpm
