@@ -1,4 +1,4 @@
-FROM primehost/ubuntu-core:develop
+FROM primehost/ubuntu-core:18.04
 MAINTAINER Prime-Host <info@nordloh-webdesign.de>
 
 ARG DEBIAN_FRONTEND=noninteractive
