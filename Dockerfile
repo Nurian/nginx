@@ -1,4 +1,4 @@
-FROM primehost/ubuntu-core
+FROM primehost/ubuntu-core:18.04
 MAINTAINER Prime-Host <info@nordloh-webdesign.de>
 
 # php directory
