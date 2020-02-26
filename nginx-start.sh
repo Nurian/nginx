@@ -15,4 +15,4 @@ sed -i s/www-data/$PRIMEHOST_USER/g /etc/php/*/fpm/pool.d/www.conf
 sed -i s:/var/log/nginx/access.log:off:g /etc/nginx/nginx.conf
 
 # start all the services
-/usr/local/bin/supervisord -n -c /etc/supervisord.conf
+/usr/bin/supervisord -c /etc/supervisord.conf
