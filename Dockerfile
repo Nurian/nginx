@@ -5,6 +5,7 @@ MAINTAINER Prime-Host <info@nordloh-webdesign.de>
 RUN mkdir /run/php
 
 # install nginx and php
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
  && apt-get -y install software-properties-common language-pack-en-base \
  && LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/php \
@@ -27,7 +28,7 @@ RUN sed -i -e "s/upload_max_filesize\s*=\s*2M/upload_max_filesize = 10G/g" /etc/
  && echo "php_admin_value[post_max_size] = 10G" >> /etc/php/7.1/fpm/pool.d/www.conf \
  && echo "php_admin_value[max_execution_time] = 300" >> /etc/php/7.1/fpm/pool.d/www.conf \
  && echo "php_admin_value[upload_max_filesize] = 10G" >> /etc/php/7.1/fpm/pool.d/www.conf \
- && echo "php_admin_value[max_input_time] = 600" >> /etc/php/7.1/fpm/pool.d/www.conf \
+ && echo "php_admin_value[max_input_time] = 600" >> /etc/php/7.1/fpm/pool.d/www.conf
 
 # nginx site conf
 ADD ./nginx-main.conf /etc/nginx/nginx.conf
