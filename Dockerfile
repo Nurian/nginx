@@ -6,7 +6,7 @@ RUN mkdir /run/php
 
 # install nginx and php
 RUN apt-get update \
- && apt-get -y install software-properties-common python-software-properties language-pack-en-base \
+ && apt-get -y install software-properties-common language-pack-en-base \
  && LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/php \
  && apt-get update \
  && apt-get -y install mysql-client nginx php7.1-fpm php7.1-mysql \
